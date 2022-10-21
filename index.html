@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Assignment 2: Responsive Design</title>
+    <meta name="author" content="name" />
+    <meta name="description" content="description here" />
+    <meta name="keywords" content="keywords,here" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .smooth {
+        transition: box-shadow 0.3s ease-in-out;
+      }
+      ::selection {
+        background-color: aliceblue;
+      }
+    </style>
+  </head>
+  <body class="bg-white font-sans leading-normal tracking-normal">
+    <!--Nav-->
+    <nav class="bg-gray-900 p-4 mt-0 w-full">
+      <div class="container mx-auto flex items-center">
+        <div class="flex text-white font-extrabold">
+          <a
+            class="flex text-white text-base no-underline hover:text-white hover:no-underline"
+            href="#"
+          >
+            ☕️
+            <span class="hidden w-0 md:w-auto md:block pl-1"
+              >Responsive Redesign</span
+            >
+          </a>
+        </div>
+        <div class="flex pl-4 text-sm">
+          <ul
+            class="list-reset flex justify-between flex-1 md:flex-none items-center"
+          >
+            <li class="mr-2">
+              <a
+                class="inline-block py-2 px-2 text-white no-underline"
+                href="index.html"
+                >HOME</a
+              >
+            </li>
+            <li class="mr-2">
+              <a
+                class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
+                href="#section1"
+                >Part1</a
+              >
+            </li>
+            <li class="mr-2">
+              <a
+                class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
+                href="#section2"
+                >Part2</a
+              >
+            </li>
+            <li class="mr-2">
+              <a
+                class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
+                href="#section3"
+                >Part3</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--slide in nav-->
+    <div
+      id="header"
+      class="bg-white fixed w-full z-10 top-0 hidden animated"
+      style="opacity: 0.95"
+    >
+      <div class="bg-white">
+        <div class="flex flex-wrap items-center content-center">
+          <div class="flex w-1/2 justify-start text-white font-extrabold">
+            <a
+              class="flex text-gray-900 no-underline hover:text-gray-900 hover:no-underline pl-2"
+              href="#"
+            >
+              💤
+              <span class="hidden w-0 md:w-auto md:block pl-1"
+                >Responsive Redesign</span
+              >
+            </a>
+          </div>
+          <div class="flex w-1/2 justify-end content-center">
+            <p class="hidden sm:block mr-3 text-center h-14 p-4 text-xs">
+              <span class="pr-2">Share this</span> 👉
+            </p>
+            <a
+              class="inline-block text-white no-underline hover:text-white hover:text-underline text-center h-10 w-10 p-2 md:h-auto md:w-16 md:p-4"
+              href="https://twitter.com/intent/tweet?url=#"
+              style="background-color: #33b1ff"
+            >
+              <svg
+                class="fill-current text-white h-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 32"
+              >
+                <path
+                  d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              class="inline-block text-white no-underline hover:text-white hover:text-underline text-center h-10 w-10 p-2 md:h-auto md:w-16 md:p-4"
+              href="https://www.facebook.com/sharer/sharer.php?u=#"
+              style="background-color: #005e99"
+            >
+              <svg
+                class="fill-current text-white h-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 32"
+              >
+                <path
+                  d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!--Progress bar-->
+      <div
+        id="progress"
+        class="h-1 bg-white shadow"
+        style="
+          background: linear-gradient(
+            to right,
+            #4dc0b5 var(--scroll),
+            transparent 0
+          );
+        "
+      ></div>
+    </div>
+
+    <!--Title-->
+    <div class="text-center pt-16 md:pt-32">
+      <p class="text-sm md:text-base text-green-500 font-bold">18 October 22</p>
+      <h1 class="font-bold break-normal text-4xl md:text-5xl">
+        Assignment 2: Responsive Redesign
+      </h1>
+	  <h1 class="py-2 break-normal text-2xl md:text-3xl">
+        <a
+			class="text-green-400 hover:text-green-500 no-underline text-2xl font-bold"
+			href="https://boards.4channel.org/a/"
+		>
+		👉ORIGINAL PAGE
+		</a>
+      </h1>
+	  <h1 class="py-2 break-normal text-2xl md:text-3xl">
+        <a
+			class="text-green-400 hover:text-green-500 no-underline text-2xl font-bold"
+			href="https://sleepypenguin111.github.io/responsive-design/"
+		>
+		👉REDESIGNED PAGE
+		</a>
+      </h1>
+	  <!-- <h1 class="py-2 break-normal text-2xl md:text-3xl">
+        <a
+			class="text-green-400 hover:text-green-500 no-underline text-2xl font-bold"
+			href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+		>
+		👉SPECIAL PAGE FOR YOU
+		</a>
+      </h1> -->
+    </div>
+
+    <!--image-->
+    <div
+      class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-8 rounded"
+      style="background-image: url('back.png'); height: 75vh"
+    ></div>
+
+    <!--Container-->
+    <div class="container max-w-5xl mx-auto -mt-32">
+      <div class="mx-0 sm:mx-6">
+        <div
+          class="bg-white w-full p-8 md:p-24 text-xl md:text-2xl text-gray-800 leading-normal"
+          style="font-family: Georgia, serif"
+        >
+          <!--Post Content-->
+
+          <!--Lead Para-->
+          <p class="text-2xl md:text-3xl mb-5 font-bold">
+            👋 Hi there!! This assignment is for me to practice the workflow of
+            redesigning a simple website. The objective is to learn the skills
+            necessaryt to analyze and identify flaws in an existing interface by
+            making , create low-fidelity and high-fidelity prototypes for
+            various screen sizes, and build a responsive website based on those
+            prototypes.
+          </p>
+
+          <a id="section1" class="text-3xl">Part 1: Identifying Usability Problems</a>
+
+          <p class="py-6">
+            In this part, I picked one page of
+            <a
+              class="text-gray-800 hover:text-green-500 no-underline border-b-2 border-green-500"
+              href="https://boards.4channel.org/a/"
+              >4 chan</a
+            >
+            to analyze based on usability and accessibility standards. Below is
+            the screnshot of the chosen webpage!
+          </p>
+
+          <img src="orig1.png" alt="old webpage screenshot" />
+          <img src="orig2.png" alt="old webpage screenshot" />
+
+          <p class="py-6">
+            As you can see, even at a first glance, this webpage does not
+            necessarily have the best design for usability and accessibility.
+            Some of the most common issues I identified are
+          </p>
+
+          <ol>
+            <li class="py-3">
+              (1) The navigation at the top of the page seems to have a very
+              small amount of spaces in between & paddings. This makes it
+              extremely difficult for the users to navigate through different
+              pages. This design in particular is devoid of efficiency of user
+              because switching channels should be relatively an easy task for
+              every user. Specifically, the webpage should speed up the process
+              of interaction between the user and the interface by making it
+              simpler and more recognizable.
+            </li>
+            <li class="py-3">
+              (2) Some texts in the page have similar colors as the backgrond
+              color. (e.g. the "/a/ - Anime & Manga" is in red and the
+              background is in pink.) This makes it harder for users to read
+              texts and potentially slows down the process of user-interface
+              interaction. This is alo not a great design as it makes the UX
+              inefficient.
+            </li>
+            <li class="py-3">
+              (3) Overall, the page is not designed in minimalistic manner.
+              Although sometimes more means better, I thought the original page
+              could provide better user experience by improving on its
+              simplicity.Ò In particular, the long list of top navigation bar
+              could be collapsed to a single dropdown and provide less
+              information for each posts.
+            </li>
+            <li class="py-3">
+              (4) Since this page provides a lot of information that most users
+              don't care, (such as post identifier number and many buttons with
+              beginner unfriendly codes at the top), it is hard for first-time
+              users to learn/remember how to use the UI quickly. From the
+              learnability and memorability points of view, I thought this page
+              could be improved as well.
+            </li>
+            <li class="py-3">
+              (5) The navigation bar at the bottom is also hard to see; first
+              time users are likely to have difficulty understanding what each
+              word represents without description. This is also not a good
+              design based on learnability and memorability. I thoguht the UX
+              with this UI could be improved by replacing it with larger
+              dropdowns.
+            </li>
+            <li class="py-3">
+              (6) There are no links to documentations or help int this page.
+              Even though it is better if the system can be used without
+              documentation, it may be necessary to provide help and
+              documentation. Any such information should be easy to search,
+              focused on the user's task, list concrete steps to be carried out,
+              and not be too large.
+            </li>
+            <li class="py-3">
+              (7) Since there is no hover effect on each post in this page, it
+              could be challenging for some users to navigate/stay informed
+              about which post there are currently checking out or about to
+              click on. With additional features of hover effects, the page can
+              improve its efficiency and usability.
+            </li>
+            <li class="py-3">
+              (8) Overall, the page is not designed in minimalistic manner.
+              Although sometimes more means better, I thought the original page
+              could provide better user experience by improving on its
+              simplicity.Ò In particular, the long list of top navigation bar
+              could be collapsed to a single dropdown and provide less
+              information for each posts.
+            </li>
+          </ol>
+
+          <p class="py-6">
+            In addition to analyzing the website on usability, I used
+            <a
+              >WebAIM WAVE</a
+            >
+            to figure out poissible accesibility problems related to the page I
+            chose. One thing that came to my attention is the frequency of "very
+            low contrast" error. In total, there were 237 contrast errors and
+            thus I thought I needed to redesign the website in a way such that
+            every character has high contrast colors from the background color.
+            Another issue related to user accesibility is that images in the
+            page did not describe the actual contents of the page, but the size
+            of the image. While this could be beneficial from the developers'
+            points of view, some users, especially those who use screen readers
+            or such applications, might have hard time understanding what a
+            specific image is about
+          </p>
+
+          <h1 class="text-3xl" id="section2">Part 2: Visual Redesign</h1>
+          <p class="py-6">
+            Based on the problems I identified in Part 1 and the page I chose, I
+            created low-fidelity wireframes, a visual design style guide, and
+            high-fidelty prototypes. Here are the screenshots of those.
+          </p>
+          <img src="bal.jpeg" alt="prototype screenshots" />
+
+          <blockquote
+            class="border-l-4 border-green-500 italic my-8 pl-8 md:pl-12"
+          >
+            Low-fidelity prototypes with annotations. (Used Balsamiq.)
+          </blockquote>
+
+          <img src="visual.png" alt="visual design guide screenshot" />
+          <blockquote
+            class="border-l-4 border-green-500 italic my-8 pl-8 md:pl-12"
+          >
+            Visual design guide made with Figma.
+          </blockquote>
+
+          <img src="high1.jpeg" alt="visual design guide screenshot" />
+          <img src="high4.jpeg" alt="visual design guide screenshot" />
+          <blockquote
+            class="border-l-4 border-green-500 italic my-8 pl-8 md:pl-12"
+          >
+            High-fidelity prototypes with annotations created with Figma.
+          </blockquote>
+
+		  <a id="section3" class="text-3xl">Part 3: Responsive Redesign</a>
+		  <p class="py-6">
+            Using the final high-fidelity prototypes, I created the page using HTML and CSS (TailwindCSS). Check out 
+			<a
+              class="text-gray-800 hover:text-green-500 no-underline border-b-2 border-green-500 text-3xl font-bold"
+              href="https://sleepypenguin111.github.io/responsive-design/"
+            >
+			redesigned page
+			</a>
+			to see my version (= better version) of the page that I chose.
+          </p>
+		  <p class="py-6">
+			 Here are the screenshots of the<a
+              class="text-gray-800 hover:text-green-500 no-underline border-b-2 border-green-500"
+              href="https://sleepypenguin111.github.io/responsive-design/"
+            >
+			redesigned page
+			</a>!! 👇
+		  </p>
+		  <div class="flex flex-col">
+			<img class="py-2" src="redesigned.png" alt="redesigned page screenshot">
+			<div class="flex flex-col md:flex-row">
+				<img class="py-2" src="redesigned2.png" width="400px" alt="redesigned page for ipad screenshot">
+		  		<img class="md:pl-6 py-2 object-contain content-center" src="redesigned3.png" width="200px" alt="redesigned page for iPhone12 screenshot">	
+			</div>
+		  </div>
+		  <blockquote
+            class="border-l-4 border-green-500 italic my-8 pl-8 md:pl-12"
+          >
+            Screenshots of my deployed page in different screen sizes.
+          </blockquote>
+
+		  <p class="text-2xl md:text-3xl mb-5 font-bold">
+            Thank you for checking out my project!!👋 Hope you have a good day!!
+          </p>
+
+          <!--/ Post Content-->
+        </div>
+
+
+		<script>
+			/* Progress bar */
+			//Source: https://alligator.io/js/progress-bar-javascript-css-variables/
+			var h = document.documentElement,
+			b = document.body,
+			st = "scrollTop",
+			sh = "scrollHeight",
+			progress = document.querySelector("#progress"),
+			scroll;
+			var scrollpos = window.scrollY;
+			var header = document.getElementById("header");
+
+			document.addEventListener("scroll", function () {
+			/*Refresh scroll % width*/
+			scroll = ((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100;
+			progress.style.setProperty("--scroll", scroll + "%");
+
+			/*Apply classes for slide in bar*/
+			scrollpos = window.scrollY;
+
+			if (scrollpos > 100) {
+				header.classList.remove("hidden");
+				header.classList.remove("fadeOutUp");
+				header.classList.add("slideInDown");
+			} else {
+				header.classList.remove("slideInDown");
+				header.classList.add("fadeOutUp");
+				header.classList.add("hidden");
+			}
+			});
+		</script>
+  	</body>
+</html>
